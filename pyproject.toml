@@ -1,0 +1,29 @@
+[project]
+name = "cloudflare-workers-script-upload-python"
+version = "1.0.0"
+description = "An example of how to upload a Cloudflare Worker from Python"
+authors = [
+    { name = "markmiller", email = "markmiller@cloudflare.com" }
+]
+dependencies = [
+    "requests>=2.32.3",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+upload-worker = 'cloudflare_workers_script_upload_python:main'
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cloudflare_workers_script_upload_python"]
