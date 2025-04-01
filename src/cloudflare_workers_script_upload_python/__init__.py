@@ -16,7 +16,7 @@ ACCOUNT_ID = os.environ.get("CLOUDFLARE_ACCOUNT_ID")
 if ACCOUNT_ID is None:
     raise MissingEnvironmentVariable("Please set envar CLOUDFLARE_ACCOUNT_ID")
 
-SCRIPT_NAME = "my-test-script"
+SCRIPT_NAME = "my-hello-world-script"
 
 def main() -> None:
     # https://developers.cloudflare.com/api/resources/workers/subresources/scripts/methods/update/
